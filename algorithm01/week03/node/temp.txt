@@ -1,0 +1,27 @@
+pStack createEmptyStack(){
+    pStack stack = (pStack)malloc(sizeof(sta));
+    if(stack){
+        stack->next=NULL;
+    }
+}
+
+int isStackEmpty(pStack stack){
+    return(stack->next==NULL);
+}
+
+void push(pStack stack,dataType element){
+    pStack newNode = (pStack)malloc(sizeof(sta));
+    newNode->element = element;
+    newNode->next = stack->next;
+    stack->next = newNode;
+}
+
+pStack pop(pStack stack){
+    if(isStackEmpty(stack)){
+        printf("the stack has been empty\n");
+        return NULL;
+    }
+    pStack temp = stack->next;
+    stack->next = temp->next;
+    return temp;
+}

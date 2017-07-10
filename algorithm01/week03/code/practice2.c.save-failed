@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define MAXSIZE 10
+//#define ElementType char
+#define Tree int
+#define Null -1
+
+int main(){
+    printf("just test\n");
+    return 0;
+}
