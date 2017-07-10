@@ -1,0 +1,33 @@
+
+11-散列4 Hashing - Hard Version   (30分)
+
+Given a hash table of size NNN, we can define a hash function . Suppose that the linear probing is used to solve collisions, we can easily obtain the status of the hash table with a given sequence of input numbers.
+
+However, now you are asked to solve the reversed problem: reconstruct the input sequence from the given status of the hash table. Whenever there are multiple choices, the smallest number is always taken.
+Input Specification:
+
+Each input file contains one test case. For each test case, the first line contains a positive integer NNN (≤1000\le 1000≤1000), which is the size of the hash table. The next line contains NNN integers, separated by a space. A negative integer represents an empty cell in the hash table. It is guaranteed that all the non-negative integers are distinct in the table.
+Output Specification:
+
+For each test case, print a line that contains the input sequence, with the numbers separated by a space. Notice that there must be no extra space at the end of each line.
+Sample Input:
+
+11
+33 1 13 12 34 38 27 22 32 -1 21
+
+Sample Output:
+
+1 13 12 21 33 34 38 27 22 32
+
+    时间限制：400ms
+    内存限制：64MB
+    代码长度限制：16kB
+    判题程序：系统默认
+    作者：何钦铭
+    单位：浙江大学
+
+题目判定
+解题程序
+编译器：*
+程序代码：*
+提交
