@@ -1,0 +1,1 @@
+componse.o: ../componse.c
