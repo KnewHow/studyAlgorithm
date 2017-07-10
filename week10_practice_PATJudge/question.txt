@@ -1,0 +1,159 @@
+The ranklist of PAT is generated from the status list, which shows the scores of the submissions. This time you are supposed to generate the ranklist for PAT.
+Input Specification:
+
+Each input file contains one test case. For each case, the first line contains 3 positive integers, NNN (≤104\le 10^4≤10​4​​), the total number of users, KKK (≤5\le 5≤5), the total number of problems, and MMM (≤105\le 10^5≤10​5​​), the total number of submissions. It is then assumed that the user id's are 5-digit numbers from 00001 to NNN, and the problem id's are from 1 to KKK. The next line contains KKK positive integers p[i] (i=1, ..., KKK), where p[i] corresponds to the full mark of the i-th problem. Then MMM lines follow, each gives the information of a submission in the following format:
+
+user_id problem_id partial_score_obtained
+
+where partial_score_obtained is either −1-1−1 if the submission cannot even pass the compiler, or is an integer in the range [0, p[problem_id]]. All the numbers in a line are separated by a space.
+Output Specification:
+
+For each test case, you are supposed to output the ranklist in the following format:
+
+rank user_id total_score s[1] ... s[K]
+
+where rank is calculated according to the total_score, and all the users with the same total_score obtain the same rank; and s[i] is the partial score obtained for the i-th problem. If a user has never submitted a solution for a problem, then "-" must be printed at the corresponding position. If a user has submitted several solutions to solve one problem, then the highest score will be counted.
+
+The ranklist must be printed in non-decreasing order of the ranks. For those who have the same rank, users must be sorted in nonincreasing order according to the number of perfectly solved problems. And if there is still a tie, then they must be printed in increasing order of their id's. For those who has never submitted any solution that can pass the compiler, or has never submitted any solution, they must NOT be shown on the ranklist. It is guaranteed that at least one user can be shown on the ranklist.
+
+Sample Input:1
+
+7 4 20
+20 25 25 30
+00002 2 12
+00007 4 17
+00005 1 19
+00007 2 25
+00005 1 20
+00002 2 2
+00005 1 15
+00001 1 18
+00004 3 25
+00002 2 25
+00005 3 22
+00006 4 -1
+00001 2 18
+00002 1 20
+00004 1 15
+00002 4 18
+00001 3 4
+00001 4 2
+00005 2 -1
+00004 2 0
+
+Sample Output:1
+
+1 00002 63 20 25 - 18
+2 00005 42 20 0 22 -
+2 00007 42 - 25 - 17
+2 00001 42 18 18 4 2
+5 00004 40 15 0 25 -
+
+
+Sample Intput:2
+
+3 1 3
+20 
+00002 1 0
+00007 1 0
+00005 1 19
+00007 2 25
+00005 1 20
+00002 2 2
+00005 1 15
+00001 1 18
+00004 3 25
+00002 2 25
+00005 3 22
+00006 4 -1
+00001 2 18
+00002 1 20
+00004 1 15
+00002 4 18
+00001 3 4
+00001 4 2
+00005 2 -1
+00004 2 0
+
+Sample Output:
+
+1 00002 63 20 25 - 18
+2 00005 42 20 0 22 -
+2 00007 42 - 25 - 17
+2 00001 42 18 18 4 2
+5 00004 40 15 0 25 -
+
+
+
+Test Input 3: when k is minimal,it is equal 1
+
+6 1 8
+20 
+00001 1 0
+00002 1 0
+00003 1 19
+00003 1 20
+00004 1 18
+00002 1 4
+00005 1 20
+00006 1 -1
+
+My Program Test Output:
+1 00003 20 20
+1 00005 20 20
+3 00004 18 18
+4 00002 4 4
+
+
+Test Input 4，when the N is maximal,But I don't 
+hava so much data,So I change the "#define MAX_USER 10000" into
+"#define MAX_USER 6" in order I can use samll data to test the maximal N
+Test perfect submitted time between 3 student and 2 student and hava
+repeat perfect submit.In my program.Two or more perfect submit, I just 
+calculate one time
+
+6 5 17
+20 25 30 20 25
+00001 1 0
+00002 1 0
+00003 1 19
+00003 1 20
+00003 1 20
+00002 2 25
+00002 3 30
+00003 3 30
+00003 4 5
+00005 2 25
+00005 1 20
+00005 1 20
+00004 1 20
+00004 3 10
+00004 2 15
+00001 1 5
+00006 3 0
+
+
+My Program Test Output:
+1 00002 55 0 25 30 - -
+1 00003 55 20 - 30 5 -
+3 00005 45 20 25 - - -
+3 00004 45 20 15 10 - -
+5 00001 5 5 - - - -
+
+I feel the reuslt has no problems.Or my test data is too low?
+
+
+
+
+    时间限制：200ms
+    内存限制：64MB
+    代码长度限制：16kB
+    判题程序：系统默认
+    作者：陈越
+    单位：浙江大学
+
+题目判定
+解题程序
+编译器：*
+程序代码：*
+提交
