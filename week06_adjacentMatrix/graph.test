@@ -1,0 +1,19 @@
+8
+9
+0 1 1
+1 3 1
+1 4 1
+3 7 1
+4 7 1
+0 2 1
+2 5 1
+2 6 1
+a b c d e f g h
+
+
+result1:
+a c g f b e h d 
+a c b g f e d h
+
+result2:
+DFS:a b d h e c f g BFS:a b c d e f g h just test
